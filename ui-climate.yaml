@@ -1,0 +1,35 @@
+title: Climate
+icon: mdi:temperature-celsius
+path: climate
+cards:
+  - type: weather-forecast
+    entity: weather.br_unknown_station
+  - type: history-graph
+    title: Temperatuur 24H
+    hours_to_show: 24
+    entities:
+      - sensor.hal_sensor_temperature
+      - sensor.overloop_sensor_temperature
+      - sensor.toilet_sensor_temperature
+      - sensor.bijkeuken_sensor_temperature
+      - sensor.br_temperature
+      - sensor.aeon_labs_zw100_multisensor_6_temperature
+  - type: history-graph
+    title: Temperatuur 72H
+    hours_to_show: 72
+    entities:
+      - sensor.hal_sensor_temperature
+      - sensor.overloop_sensor_temperature
+      - sensor.toilet_sensor_temperature
+      - sensor.bijkeuken_sensor_temperature
+      - sensor.br_temperature
+      - sensor.aeon_labs_zw100_multisensor_6_temperature
+  - type: entities
+    title: Temperatuur
+    show_header_toggle: false
+    entities:
+      - sensor.aeon_labs_zw100_multisensor_6_temperature
+      - sensor.hal_sensor_temperature
+      - sensor.overloop_sensor_temperature
+      - sensor.bijkeuken_sensor_temperature
+      - sensor.toilet_sensor_temperature

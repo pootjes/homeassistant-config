@@ -1,0 +1,16 @@
+home-assistant.log
+.storage/
+.git/
+.cloud/
+www/Douwe.JPG
+www/Lieke.JPG
+deps/
+tts/
+.vscode
+secrets.yaml
+options.xml
+OZW_Log.txt
+pyozw.sqlite
+zwcfg_0xc9042adf.xml
+zwscene.xml
+ip_bans.yaml

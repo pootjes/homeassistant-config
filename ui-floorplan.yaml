@@ -1,0 +1,122 @@
+title: Floorplan
+icon: mdi:map
+path: Floorplan_ground
+panel: true
+cards:
+  - type: vertical-stack
+    cards: 
+#- type: custom:plan-coordinates 
+      - type: picture-elements
+        image: /local/floorplan.png
+        elements:
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.bijkeuken
+            style:
+              top: 21%
+              left: 28%
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.toilet
+            style:
+              top: 27%
+              left: 15%
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.schuifpui
+            style:
+              top: 26%
+              left: 63%
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.keuken
+            style:
+              top: 37%
+              left: 49%
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.woonkamer_tussen_keuken_en_tv
+            style:
+              top: 60%
+              left: 74%
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.hal
+            style:
+              top: 60%
+              left: 57%
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.woonkamer
+            style:
+              top: 78%
+              left: 64%
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.erker
+            style:
+              top: 89%
+              left: 64%
+          - type: state-label
+            entity: sensor.hal_sensor_temperature
+            style:
+              top: 60%
+              left: 44%
+              font-weight: bold
+              font-size: 2.0vw
+              color: white
+              text-shadow: "text-shadow: -1px -1px 0 #555,    1px -1px 0 #555,    -1px 1px 0 #555,    1px 1px 0 #555" 
+          - type: state-label
+            entity: sensor.bijkeuken_sensor_temperature
+            style:
+              top: 27%
+              left: 28%
+              font-weight: bold
+              font-size: 2.0vw
+              color: white
+              text-shadow: "text-shadow: -1px -1px 0 #555,    1px -1px 0 #555,    -1px 1px 0 #555,    1px 1px 0 #555" 
+          - type: state-label
+            entity: sensor.aeon_labs_zw100_multisensor_6_temperature
+            style:
+              top: 63%
+              left: 74%
+              font-weight: bold
+              font-size: 2.0vw
+              color: white
+              text-shadow: "text-shadow: -1px -1px 0 #555,    1px -1px 0 #555,    -1px 1px 0 #555,    1px 1px 0 #555" 
+          - type: state-label
+            entity: sensor.hourly_gas_consumption
+            style:
+              top: 41%
+              left: 24%
+              font-weight: bold
+              font-size: 2.0vw
+              color: white
+              text-shadow: "text-shadow: -1px -1px 0 #555,    1px -1px 0 #555,    -1px 1px 0 #555,    1px 1px 0 #555" 
+          - type: state-label
+            entity: sensor.power_consumption
+            style:
+              top: 45%
+              left: 24%
+              font-weight: bold
+              font-size: 2.0vw
+              color: white
+              text-shadow: "text-shadow: -1px -1px 0 #555,    1px -1px 0 #555,    -1px 1px 0 #555,    1px 1px 0 #555" 
+          - type: state-label
+            entity: sensor.power_production
+            style:
+              top: 49%
+              left: 24%
+              font-weight: bold
+              font-size: 2.0vw
+              color: white
+              text-shadow: "text-shadow: -1px -1px 0 #555,    1px -1px 0 #555,    -1px 1px 0 #555,    1px 1px 0 #555" 
+           

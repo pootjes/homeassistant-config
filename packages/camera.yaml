@@ -1,0 +1,11 @@
+camera:
+  - platform: foscam
+    ip: 192.168.178.18
+    username: !secret cam_katten_user
+    password: !secret cam_katten_ww
+    name: Gijs
+  - platform: foscam
+    ip: 192.168.178.21
+    username: !secret cam_woonkamer_user
+    password: !secret cam_woonkamer_ww
+    name: Woonkamer

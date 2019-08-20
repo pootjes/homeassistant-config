@@ -1,0 +1,19 @@
+sensor:
+  - platform:   buienradar
+    latitude:   !secret homeassistant_latitude
+    longitude:  !secret homeassistant_longitude
+    monitored_conditions:
+      - temperature
+      - groundtemperature
+      - humidity
+      - windspeed
+      - winddirection
+      - pressure
+      - irradiance
+      - precipitation
+
+weather:
+  - platform:   buienradar
+    latitude:   !secret homeassistant_latitude
+    longitude:  !secret homeassistant_longitude
+    forecast:   true

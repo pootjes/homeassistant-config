@@ -1,0 +1,26 @@
+climate:
+  platform: nefit
+  name: Heating
+  serial: !secret nefit_serial
+  accesskey: !secret nefit_accesskey
+  password: !secret nefit_password
+
+sensor:
+  - platform: template
+    sensors:
+      nefit_temp_outside:
+        friendly_name: 'Buiten temperatuur Nefit'
+        unit_of_measurement: '°C'
+        value_template: "{{ state_attr('climate.heating', 'outdoor_temperature') }}"
+      nefit_temp_inside:
+        friendly_name: 'Binnen temperatuur Nefit'
+        unit_of_measurement: '°C'
+        value_template: "{{ state_attr('climate.heating', 'current_temperature') }}"
+      nefit_temp_inside_setpoint:
+        friendly_name: 'Setpoint temperatuur Nefit'
+        unit_of_measurement: '°C'
+        value_template: "{{ state_attr('climate.heating', 'temperature') }}"
+      nefit_gas_year_total:
+        friendly_name: 'Nefit jaarlijks gasverbruik'
+        unit_of_measurement: 'kWh'
+        value_template: "{{ state_attr('climate.heating', 'year_total') }}"

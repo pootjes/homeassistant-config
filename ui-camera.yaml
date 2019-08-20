@@ -1,0 +1,13 @@
+title: Surveillance
+icon: mdi:cctv
+panel: true
+path: camera
+cards:
+  - type: picture-glance
+    title: Woonkamer
+    entities: []
+    camera_image: camera.woonkamer
+  - type: picture-glance
+    title: Gijs
+    entities: []
+    camera_image: camera.gijs

@@ -1,0 +1,119 @@
+title: Lighting
+icon: mdi:lightbulb
+path: lighting
+cards:
+  - type: entities
+    title: Huis scripts
+    show_header_toggle: false
+    entities:
+      - script.activate_slapen_gaan
+  - type: entities
+    title: Activeer Woonkamer scenes
+    show_header_toggle: false
+    entities:
+      - script.activate_hue_ontspannen
+      - script.activate_hue_helder
+      - script.activate_hue_soho
+      - script.activate_hue_tropical_sunset
+  - type: vertical-stack
+    cards:
+    - type: horizontal-stack
+      cards:
+        - type: "custom:button-card"
+          entity: light.erker
+          icon: mdi:window-closed
+          color: auto
+          hold_action:
+            action: more-info
+        - type: custom:button-card
+          entity: light.woonkamer
+          icon: mdi:television
+          color: auto
+          hold_action:
+            action: more-info
+        - type: "custom:button-card"
+          entity: light.woonkamer_tussen_keuken_en_tv
+          icon: mdi:clock
+          color: auto
+          hold_action:
+            action: more-info
+    - type: horizontal-stack
+      cards:
+        - type: "custom:button-card"
+          entity: light.keuken
+          icon: mdi:fridge
+          color: auto
+          hold_action:
+            action: more-info
+        - type: "custom:button-card"
+          entity: light.schuifpui
+          icon: mdi:beer
+          color: auto
+          hold_action:
+            action: more-info
+        - type: "custom:button-card"
+          entity: light.eettafel
+          icon: mdi:food-fork-drink
+          color: auto
+          hold_action:
+            action: more-info
+    - type: horizontal-stack
+      cards:
+        - type: "custom:button-card"
+          entity: light.overloop
+          icon: mdi:stairs
+          color: auto
+          hold_action:
+            action: more-info
+        - type: custom:button-card
+          entity: light.badkamer
+          icon: mdi:shower
+          color: auto
+          hold_action:
+            action: more-info
+        - type: "custom:button-card"
+          entity: light.master_bedroom
+          icon: mdi:hotel
+          color: auto
+          hold_action:
+            action: more-info
+    - type: horizontal-stack
+      cards:
+        - type: custom:button-card
+          entity: light.toilet
+          icon: mdi:toilet
+          color: auto
+          hold_action:
+            action: more-info
+        - type: "custom:button-card"
+          entity: light.bijkeuken
+          icon: mdi:file-cabinet
+          color: auto
+          hold_action:
+            action: more-info
+        - type: "custom:button-card"
+          entity: light.hal
+          icon: mdi:door-closed
+          color: auto
+          hold_action:
+            action: more-info
+    - type: horizontal-stack
+      cards:
+        - type: "custom:button-card"
+          entity: light.terras
+          icon: mdi:weather-sunny
+          color: auto
+          hold_action:
+            action: more-info
+        - type: "custom:button-card"
+          entity: light.terras_achter
+          icon: mdi:grill
+          color: auto
+          hold_action:
+            action: more-info
+        - type: "custom:button-card"
+          entity: light.carport
+          icon: mdi:car
+          color: auto
+          hold_action:
+            action: more-info

@@ -1,0 +1,9 @@
+sensor:
+  - platform: rova
+    zip_code: 7634RK
+    house_number: 18
+    monitored_conditions:
+      - bio
+      - plastic
+      - residual
+      - paper

@@ -1,0 +1,7 @@
+title: Boodschappen
+icon: mdi:cart
+path: boodschappen
+panel: true
+cards:
+  - type: shopping-list
+    title: Boodschappen

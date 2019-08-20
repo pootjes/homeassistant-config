@@ -1,0 +1,70 @@
+sensor:
+  - platform: mqtt
+    state_topic: "smartmeter/power_consumption"
+    name: Power consumption
+    unit_of_measurement: "kW"
+
+  - platform: mqtt
+    state_topic: "smartmeter/power_consumption_low"
+    name: Power consumption low
+    unit_of_measurement: "kWh"
+
+  - platform: mqtt
+    state_topic: "smartmeter/power_consumption_normal"
+    name: Power consumption normal
+    unit_of_measurement: "kWh"
+
+  - platform: mqtt
+    state_topic: "smartmeter/power_consumption_phase_l1"
+    name: Power consumption L1
+    unit_of_measurement: "kWh"
+
+  - platform: mqtt
+    state_topic: "smartmeter/power_consumption_phase_l2"
+    name: Power consumption L2
+    unit_of_measurement: "kWh"
+
+  - platform: mqtt
+    state_topic: "smartmeter/power_consumption_phase_l3"
+    name: Power consumption L3
+    unit_of_measurement: "kWh"
+
+  - platform: mqtt
+    state_topic: "smartmeter/power_production"
+    name: Power production
+    unit_of_measurement: "kW"
+
+  - platform: mqtt
+    state_topic: "smartmeter/power_production_low"
+    name: Power production low
+    unit_of_measurement: "kWh"
+
+  - platform: mqtt
+    state_topic: "smartmeter/power_production_normal"
+    name: Power production normal
+    unit_of_measurement: "kWh"
+
+  - platform: mqtt
+    state_topic: "smartmeter/power_production_phase_l1"
+    name: Power production L1
+    unit_of_measurement: "kWh"
+
+  - platform: mqtt
+    state_topic: "smartmeter/power_production_phase_l2"
+    name: Power production L2
+    unit_of_measurement: "kWh"
+
+  - platform: mqtt
+    state_topic: "smartmeter/power_production_phase_l3"
+    name: Power production L3
+    unit_of_measurement: "kWh"
+
+  - platform: mqtt
+    state_topic: "smartmeter/hourly_gas_consumption"
+    name: Hourly gas consumption
+    unit_of_measurement: "m3/h"
+
+  - platform: mqtt
+    state_topic: "smartmeter/gas_consumption"
+    name: Gas consumption
+    unit_of_measurement: "m3"

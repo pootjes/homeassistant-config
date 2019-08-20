@@ -1,0 +1,4 @@
+notify:
+  - platform: pushbullet
+    name: Douwe
+    api_key: !secret apikey_pushbullet

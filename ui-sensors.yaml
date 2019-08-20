@@ -1,0 +1,71 @@
+title: Sensors
+icon: mdi:gauge
+path: sensors
+panel: false
+cards:
+  - type: entities
+    title: Beweginsmelders
+    show_header_toggle: false
+    entities:
+      - entity: sensor.aeon_labs_zw100_multisensor_6_burglar
+        name: Woonkamer
+        secondary_info: last-changed
+      - entity: binary_sensor.bijkeuken_sensor_motion
+        name: Bijkeuken
+        secondary_info: last-changed
+      - entity: binary_sensor.hal_sensor_motion
+        name: Hal
+        secondary_info: last-changed
+      - entity: binary_sensor.overloop_sensor_motion
+        name: Overloop
+        secondary_info: last-changed
+      - entity: binary_sensor.toilet_sensor_motion
+        name: Toilet
+        secondary_info: last-changed
+      - entity: binary_sensor.carport_sensor_motion
+        name: Carport
+        secondary_info: last-changed
+  - type: entities
+    title: Lichtsterkte
+    show_header_toggle: false
+    entities:
+      - entity: sensor.aeon_labs_zw100_multisensor_6_luminance
+        name: Woonkamer
+      - entity: sensor.bijkeuken_sensor_light_level
+        name: Bijkeuken
+      - entity: sensor.hal_sensor_light_level
+        name: Hal
+      - entity: sensor.overloop_sensor_light_level
+        name: Overloop
+      - entity: sensor.toilet_sensor_light_level
+        name: Toilet
+      - entity: sensor.carport_sensor_light_level
+        name: Carport
+  - type: sensor
+    entity: sensor.aeon_labs_zw100_multisensor_6_temperature
+    name: Woonkamer temperatuur Sensor
+    graph: line
+  - type: sensor
+    entity: sensor.aeon_labs_zw100_multisensor_6_temperature
+    name: Woonkamer temperatuur Sensor
+    graph: line
+  - type: sensor
+    entity: sensor.hal_sensor_temperature
+    name: Hal temperatuur
+    graph: line
+  - type: sensor
+    entity: sensor.overloop_sensor_temperature
+    name: Overloop temperatuur
+    graph: line
+  - type: sensor
+    entity: sensor.toilet_sensor_temperature
+    name: Toilet temperatuur
+    graph: line
+  - type: sensor
+    entity: sensor.bijkeuken_sensor_temperature
+    name: Bijkeuken temperatuur
+    graph: line
+  - type: sensor
+    entity: sensor.br_temperature
+    name: Buiten temperatuur Buienradar
+    graph: line

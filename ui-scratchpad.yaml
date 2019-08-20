@@ -1,0 +1,123 @@
+title: Home
+icon: mdi:home
+path: scratchpad
+cards:
+  - type: picture-entity
+    entity: camera.gijs
+  - type: picture-entity
+    entity: camera.woonkamer
+  - type: thermostat
+    entity: climate.heating
+  - type: entities
+    title: Activeer scenes
+    show_header_toggle: false
+    entities:
+      - script.activate_hue_soho
+      - script.activate_hue_tropical_sunset
+  - type: shopping-list
+    title: Boodschappen
+  - type: weather-forecast
+    entity: weather.br_unknown_station
+  - type: entities
+    title: Keuken en woonkamer verlichting
+    entities:
+      - light.erker
+      - light.woonkamer
+      - light.woonkamer_tussen_keuken_en_tv
+      - light.keuken
+      - light.schuifpui
+  - type: entities
+    title: Hal en overloop verlichting
+    entities:
+      - light.hal
+      - light.overloop
+  - type: history-graph
+    title: Temperatuur 24H
+    hours_to_show: 24
+    entities:
+      - sensor.hal_temperatuur
+      - sensor.overloop_temperatuur
+      - sensor.toilet_temperatuur
+      - sensor.bijkeuken_temperatuur
+      - sensor.br_temperature_2
+      - sensor.aeotec_zw100_multisensor_6_temperature
+  - type: history-graph
+    title: Temperatuur 72H
+    hours_to_show: 72
+    entities:
+      - sensor.hal_temperatuur
+      - sensor.overloop_temperatuur
+      - sensor.toilet_temperatuur
+      - sensor.bijkeuken_temperatuur
+      - sensor.br_temperature_2
+      - sensor.aeotec_zw100_multisensor_6_temperature
+  - type: entities
+    title: Temperatuur
+    show_header_toggle: false
+    entities:
+      - sensor.aeotec_zw100_multisensor_6_temperature
+      - sensor.hal_temperatuur
+      - sensor.overloop_temperatuur
+      - sensor.bijkeuken_temperatuur
+      - sensor.toilet_temperatuur
+  - type: entities
+    title: Licht
+    show_header_toggle: false
+    entities:
+      - sensor.aeotec_zw100_multisensor_6_luminance
+      - sensor.hal_licht
+      - sensor.overloop_licht
+      - sensor.bijkeuken_licht
+      - sensor.toilet_licht
+  - type: entities
+    title: Bijkeuken verlichting
+    entities:
+      - light.bijkeuken
+      - light.toilet
+  - type: entities
+    title: Badkamer verlichting
+    entities:
+      - light.badkamer
+  - type: entities
+    title: Buiten verlichting
+    entities:
+      - light.terras
+      - light.carport
+  - type: entities
+    title: Systeem
+    show_header_toggle: false
+    entities:
+      - sensor.cpu_temperature
+      - sensor.disk_use_percent_home
+      - sensor.last_boot
+      - sensor.memory_use
+      - sensor.processor_use
+  - type: entities
+    title: Current power and gas
+    show_header_toggle: false
+    entities:
+      - sensor.power_consumption
+      - sensor.power_production
+      - sensor.hourly_gas_consumption
+  - type: entities
+    title: Current power and gas
+    show_header_toggle: false
+    entities:
+      - sensor.power_consumption_low
+      - sensor.power_consumption_normal
+      - sensor.power_consumption_l1
+      - sensor.power_consumption_l2
+      - sensor.power_consumption_l3
+      - sensor.power_production_low
+      - sensor.power_production_normal
+      - sensor.power_production_l1
+      - sensor.power_production_l2
+      - sensor.power_production_l3
+      - sensor.hourly_gas_consumption
+      - sensor.gas_consumption
+  - type: entities
+    title: Aanwezigheid
+    show_header_toggle: false
+    entities:
+      - device_tracker.hass_douwe
+      - device_tracker.hass_lieke

@@ -1,0 +1,192 @@
+title: Home
+icon: mdi:home
+path: default_view
+cards:
+  - type: vertical-stack
+    cards:
+    - type: horizontal-stack
+      cards:
+        - type: "custom:button-card"
+          entity: light.erker
+          icon: mdi:window-closed
+          color: auto
+          hold_action:
+            action: more-info
+        - type: custom:button-card
+          entity: light.woonkamer
+          icon: mdi:television
+          color: auto
+          hold_action:
+            action: more-info
+        - type: "custom:button-card"
+          entity: light.woonkamer_tussen_keuken_en_tv
+          icon: mdi:clock
+          color: auto
+          hold_action:
+            action: more-info
+    - type: horizontal-stack
+      cards:
+        - type: "custom:button-card"
+          entity: light.keuken
+          icon: mdi:fridge
+          color: auto
+          hold_action:
+            action: more-info
+        - type: "custom:button-card"
+          entity: light.schuifpui
+          icon: mdi:beer
+          color: auto
+          hold_action:
+            action: more-info
+        - type: "custom:button-card"
+          entity: light.eettafel
+          icon: mdi:food-fork-drink
+          color: auto
+          hold_action:
+            action: more-info
+    - type: horizontal-stack
+      cards:
+        - type: "custom:button-card"
+          entity: light.overloop
+          icon: mdi:stairs
+          color: auto
+          hold_action:
+            action: more-info
+        - type: custom:button-card
+          entity: light.badkamer
+          icon: mdi:shower
+          color: auto
+          hold_action:
+            action: more-info
+        - type: "custom:button-card"
+          entity: light.master_bedroom
+          icon: mdi:hotel
+          color: auto
+          hold_action:
+            action: more-info
+    - type: horizontal-stack
+      cards:
+        - type: custom:button-card
+          entity: light.toilet
+          icon: mdi:toilet
+          color: auto
+          hold_action:
+            action: more-info
+        - type: "custom:button-card"
+          entity: light.bijkeuken
+          icon: mdi:file-cabinet
+          color: auto
+          hold_action:
+            action: more-info
+        - type: "custom:button-card"
+          entity: light.hal
+          icon: mdi:door-closed
+          color: auto
+          hold_action:
+            action: more-info
+    - type: horizontal-stack
+      cards:
+        - type: "custom:button-card"
+          entity: light.terras
+          icon: mdi:weather-sunny
+          color: auto
+          hold_action:
+            action: more-info
+        - type: "custom:button-card"
+          entity: light.terras_achter
+          icon: mdi:grill
+          color: auto
+          hold_action:
+            action: more-info
+        - type: "custom:button-card"
+          entity: light.carport
+          icon: mdi:car
+          color: auto
+          hold_action:
+            action: more-info
+  - type: weather-forecast
+    entity: weather.br_unknown_station
+  - type: glance
+    title: Temperatuur
+    entities:
+      - entity: sensor.carport_sensor_temperature
+        name: Carport
+      - entity: sensor.bijkeuken_sensor_temperature
+        name: Bijkeuken
+      - entity: sensor.toilet_sensor_temperature
+        name: Toilet
+      - entity: sensor.aeon_labs_zw100_multisensor_6_temperature
+        name: Woonkamer
+      - entity: sensor.hal_sensor_temperature
+        name: Hal
+      - entity: sensor.overloop_sensor_temperature
+        name: Overloop
+  - type: glance
+    title: Lichtsterkte
+    entities:
+      - entity: sensor.carport_sensor_light_level
+        name: Carport
+      - entity: sensor.bijkeuken_sensor_light_level
+        name: Bijkeuken
+      - entity: sensor.toilet_sensor_light_level
+        name: Toilet
+      - entity: sensor.hal_sensor_light_level
+        name: Hal
+      - entity: sensor.overloop_sensor_light_level
+        name: Overloop
+  - type: glance
+    title: Beweging
+    entities:
+      - entity: binary_sensor.carport_sensor_motion
+        name: Carport
+      - entity: binary_sensor.bijkeuken_sensor_motion
+        name: Bijkeuken
+      - entity: binary_sensor.toilet_sensor_motion
+        name: Toilet
+      - entity: sensor.aeon_labs_zw100_multisensor_6_burglar
+        name: Woonkamer
+      - entity: binary_sensor.hal_sensor_motion
+        name: Hal
+      - entity: binary_sensor.overloop_sensor_motion
+        name: Beweging
+  - type: glance
+    title: Vuilnis
+    entities:
+      - entity: sensor.rova_plastic
+        name: Oranje
+      - entity: sensor.rova_bio
+        name: Groen
+      - entity: sensor.rova_residual
+        name: Grijs
+
+  - type: alarm-panel
+    name: Alarm
+    entity: alarm_control_panel.alarm_langepad
+
+  - type: picture-entity
+    entity: device_tracker.life360_lieke_stamsnijder
+    image: /local/Lieke.JPG
+
+  - type: picture-entity
+    entity: device_tracker.life360_douwe_kuipers
+    image: /local/Douwe.JPG
+
+  - type: picture-glance
+    title: Woonkamer
+    entities: []
+    camera_image: camera.woonkamer
+  - type: picture-glance
+    title: Gijs
+    entities: []
+    camera_image: camera.gijs
+
+  - type: entities
+    title: Systeem
+    show_header_toggle: false
+    entities:
+      - sensor.cpu_temperature
+      - sensor.disk_use_percent_home
+      - sensor.last_boot
+      - sensor.memory_use
+      - sensor.processor_use
+

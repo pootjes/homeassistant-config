@@ -1,0 +1,22 @@
+title: Langepad 18
+resources:
+  - url: /local/button-card.js?v=0.0.8
+    type: module
+  - url: /local/surveillance-card.js?v=0.2
+    type: module
+  - url: /local/circle-sensor-card.js?v=0.1
+    type: module
+  - url: /local/slider-entity-row.js?v=d6da75
+    type: js
+  - url: /local/plan-coordinates.js
+    type: js   
+
+views:
+  - !include ui-floorplan.yaml
+  - !include ui-dashboard.yaml
+  - !include ui-lighting.yaml
+  - !include ui-sensors.yaml
+  - !include ui-climate.yaml
+  - !include ui-camera.yaml
+  - !include ui-shopping.yaml
+  - !include ui-scratchpad.yaml

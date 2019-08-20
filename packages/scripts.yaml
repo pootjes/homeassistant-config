@@ -1,0 +1,183 @@
+script:
+  activate_slapen_gaan:
+    alias: Slapen gaan scene
+    sequence:
+      - service: light.turn_off
+        data:
+          entity_id: light.erker
+      - service: light.turn_off
+        data:
+          entity_id: light.woonkamer
+      - service: light.turn_off
+        data:
+          entity_id: light.woonkamer_tussen_keuken_en_tv
+      - service: light.turn_off
+        data:
+          entity_id: light.keuken
+      - service: light.turn_off
+        data:
+          entity_id: light.bijkeuken
+      - service: light.turn_off
+        data:
+          entity_id: light.schuifpui
+  activate_hue_helder:
+    alias: Hue Helder scene
+    sequence:
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Erker"
+          scene_name: "Helder"
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Woonkamer"
+          scene_name: "Helder"
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Woonkamer tussen keuken en tv"
+          scene_name: "Helder"
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Keuken"
+          scene_name: "Helder"
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Schuifpui"
+          scene_name: "Helder"
+  activate_hue_ontspannen:
+    alias: Hue Ontspannen scene
+    sequence:
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Erker"
+          scene_name: "Ontspannen"
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Woonkamer"
+          scene_name: "Ontspannen"
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Woonkamer tussen keuken en tv"
+          scene_name: "Ontspannen"
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Keuken"
+          scene_name: "Ontspannen"
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Schuifpui"
+          scene_name: "Ontspannen"
+  activate_hue_tropical_sunset:
+    alias: Activieer Tropical Sunset scene
+    sequence:
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Erker"
+          scene_name: "Tropische schemering"
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Woonkamer"
+          scene_name: "Tropische schemering" 
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Woonkamer tussen keuken en tv"
+          scene_name: "Tropische schemering"
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Keuken"
+          scene_name: "Ontspannen"
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Schuifpui"
+          scene_name: "Tropische schemering"
+  activate_hue_soho:
+    alias: Activeer Soho scene
+    sequence:
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Erker"
+          scene_name: "Soho"
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Woonkamer"
+          scene_name: "Soho"
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Woonkamer tussen keuken en tv"
+          scene_name: "Soho"
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Keuken"
+          scene_name: "Ontspannen"
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Schuifpui"
+          scene_name: "Soho"
+
+  sunset_script:
+    alias: Sunset script
+    sequence:
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Woonkamer"
+          scene_name: "Helder"
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Woonkamer tussen keuken en tv"
+          scene_name: "Helder"
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Keuken"
+          scene_name: "Helder"
+
+  morning_routine:
+    alias: Morning Routine
+    sequence:
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Woonkamer tussen keuken en tv"
+          scene_name: "Helder"
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Keuken"
+          scene_name: "Helder"
+      - delay:
+          minutes: 10
+      - service: light.turn_off
+        data:
+          entity_id: light.woonkamer_tussen_keuken_en_tv
+      - service: light.turn_off
+        data:
+          entity_id: light.keuken
+
+
+  test_script:
+    alias: Test script
+    sequence:
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Erker"
+          scene_name: "Soho"
+      - delay:
+          seconds: 10
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Woonkamer"
+          scene_name: "Soho"
+      - delay:
+          seconds: 10
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Woonkamer tussen keuken en tv"
+          scene_name: "Soho"
+      - delay:
+          seconds: 10
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Keuken"
+          scene_name: "Ontspannen"
+      - delay:
+          seconds: 10
+      - service: hue.hue_activate_scene
+        data:
+          group_name: "Schuifpui"
+          scene_name: "Soho"
